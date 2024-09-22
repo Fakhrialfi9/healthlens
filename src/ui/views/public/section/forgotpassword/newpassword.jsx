@@ -83,7 +83,7 @@ const ConfirmEmail = ({ NextStepForm, PreviousStepForm }) => {
         <Box>
           <Mail />
         </Box>
-        <TextHeadline>Email Confirmation</TextHeadline>
+        <TextHeadline>New Password</TextHeadline>
         <TextSubHeadline>Please set your new password to secure your account.</TextSubHeadline>
       </Headline>
 
