@@ -4,20 +4,24 @@ import { Snackbar, Button } from "@mui/joy";
 import { X } from "lucide-react";
 
 const soundMappings = {
-  danger: "../../public/media/ringtone/messageDanger.mp3",
-  warning: "../../public/media/ringtone/messageDanger.mp3",
-  success: "../../public/media/ringtone/messageSuccess.mp3",
-  info: "../../public/media/ringtone/messageDanger.mp3",
+  danger: "/media/ringtone/messageDanger.mp3",
+  warning: "/media/ringtone/messageWarning.mp3",
+  success: "/media/ringtone/messageSuccess.mp3",
+  info: "/media/ringtone/messageInfo.mp3",
 };
 
 const CustomAnimatedSnackbar = ({ anchorOrigin, color, variant, open, setOpen, message, autoHideDuration = 2250 }) => {
+  const handleSoundPlay = () => {
+    const soundFile = soundMappings[color] || soundMappings.info;
+    const audio = new Audio(soundFile);
+    audio.play().catch((error) => {
+      console.error("Error playing sound:", error);
+    });
+  };
+
   useEffect(() => {
     if (open) {
-      const soundFile = soundMappings[color] || soundMappings.info;
-      const audio = new Audio(soundFile);
-      audio.play().catch((error) => {
-        console.error("Error playing sound:", error);
-      });
+      handleSoundPlay();
     }
   }, [open, color]);
 
