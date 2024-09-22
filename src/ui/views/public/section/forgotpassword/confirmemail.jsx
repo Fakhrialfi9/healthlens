@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Headline, Box, TextHeadline, TextSubHeadline, FormSignIn } from "../../../../../assets/style/views/public/forgotpasswordStyle.js";
-import { Mail, AtSign } from "lucide-react";
+import { AtSign } from "lucide-react";
 import { Input, Button } from "@mui/joy";
+import Lottie from "lottie-react";
+import animationData from "../../../../../../public/media/icon/mail.json";
 import AlertSnackBar from "../../../../../lib/alert.jsx";
 
 const ConfirmEmail = ({ NextStepForm }) => {
@@ -59,7 +61,7 @@ const ConfirmEmail = ({ NextStepForm }) => {
     <>
       <Headline>
         <Box>
-          <Mail />
+          <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 65, height: 65 }} />
         </Box>
         <TextHeadline>Confirmation Email</TextHeadline>
         <TextSubHeadline>Please enter your email address below to receive a confirmation code.</TextSubHeadline>

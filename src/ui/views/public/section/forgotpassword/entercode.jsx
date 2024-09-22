@@ -10,7 +10,8 @@ import {
 } from "../../../../../assets/style/views/public/forgotpasswordStyle.js";
 import { Button } from "@mui/joy";
 import { ChevronLeft } from "lucide-react";
-import { TbNumber123 } from "react-icons/tb";
+import Lottie from "lottie-react";
+import animationData from "../../../../../../public/media/icon/message.json";
 import FormOTPInput from "../../../../../lib/formOTPInput.jsx";
 import AlertSnackBar from "../../../../../lib/alert.jsx";
 
@@ -67,7 +68,7 @@ const EnterCode = ({ NextStepForm, PreviousStepForm }) => {
     <>
       <Headline>
         <Box>
-          <TbNumber123 size={30} />
+          <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 65, height: 65 }} />
         </Box>
         <TextHeadline>Enter Code</TextHeadline>
         <TextSubHeadline>Please enter the 5-digit code sent to your email.</TextSubHeadline>

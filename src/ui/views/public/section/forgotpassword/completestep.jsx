@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Headline, Box, TextHeadline, TextSubHeadline, FormSignIn } from "../../../../../assets/style/views/public/forgotpasswordStyle.js";
 import { Button } from "@mui/joy";
-import { Smile } from "lucide-react";
+import Lottie from "lottie-react";
+import animationData from "../../../../../../public/media/icon/confetti.json";
 
 const EnterCode = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const EnterCode = () => {
     <>
       <Headline>
         <Box>
-          <Smile />
+          <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 65, height: 65 }} />
         </Box>
         <TextHeadline>Password Update Successful</TextHeadline>
         <TextSubHeadline>You have successfully completed all steps for updating your password. Your password has now been refreshed.</TextSubHeadline>

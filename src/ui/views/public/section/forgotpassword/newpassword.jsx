@@ -9,10 +9,11 @@ import {
   PasswordParameter,
   NavigationStepper,
 } from "../../../../../assets/style/views/public/forgotpasswordStyle.js";
-import { Mail } from "lucide-react";
 import { Input, Button, IconButton } from "@mui/joy";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ChevronLeft } from "lucide-react";
+import Lottie from "lottie-react";
+import animationData from "../../../../../../public/media/icon/eye.json";
 import Typography from "@mui/joy/Typography";
 import AlertSnackBar from "../../../../../lib/alert.jsx";
 
@@ -81,7 +82,7 @@ const ConfirmEmail = ({ NextStepForm, PreviousStepForm }) => {
     <>
       <Headline>
         <Box>
-          <Mail />
+          <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 65, height: 65 }} />
         </Box>
         <TextHeadline>New Password</TextHeadline>
         <TextSubHeadline>Please set your new password to secure your account.</TextSubHeadline>
